@@ -196,7 +196,6 @@ struct board {
         return true;
     }
 
-    // TO-DO: WHY WE SHOULD SWAP THE SIGN HERE ?!
     bool operator < (const board& right) const {
         return boardBadness > right.boardBadness;
     }
@@ -416,8 +415,6 @@ board putFigureToTheBoard(board theBoard, int col, figure nextFigure) {
 
 vector<pairRotationColumn> answerHistory;
 
-// TO-DO: EDNA SLABOST IMA - AKO PADNE STURCHEIKI, IZTRIQT SE I SPRE DA STARCHI -> produljavame igrata
-
 // Return the last board - the optima
 
 board solve() {
@@ -500,43 +497,10 @@ void writeOutput(board bestCurrentBoard) {
         printf("2 4 ");
     }
 
-    /*
-    // --------------
-    // Demo the falling
-    board startingBoard;
-    board nextStepBoard;
-
-    // Start to put figures
-    for (int i = 0; i < puttedWell; i ++) {
-        int currentFig = figures[i];
-        int rot = bestCurrentBoard.historyUpToNow[i].rotation;
-        int col = bestCurrentBoard.historyUpToNow[i].leftmostColumn;
-
-        figure figureToPut = figuresRotates[currentFig][rot];
-        nextStepBoard = putFigureToTheBoard(startingBoard, col, figureToPut);
-
-        // The pieces go down, and down, and down...
-        while (nextStepBoard.hasFullRows()) {
-            nextStepBoard = deleteRows(nextStepBoard);
-            nextStepBoard = putGroupDown(nextStepBoard);
-        }
-
-        startingBoard = nextStepBoard;
-
-//        cout << "figure: " << currentFig + 1 << " ";
-  //      cout << "col: " << col << " ";
-    //    cout << "rot: " << rot << " ";
-      //  cout << endl;
-
-        // nextStepBoard.print();
-    }
-    */
-
 }
 
 int main() {
 
-    // TO-DO: SMENQ BITOVATA MASKA OT COLONNA NA REDOVA !!
     precalculateFigures();
 
     readInput();

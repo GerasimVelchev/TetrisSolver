@@ -1,2 +1,2 @@
-# TetrisSolver
-A tetris solver based on genetic algorithm with simulated annealing.
+# Tetris AI player
+A tetris-based AI player based on genetic algorithm with simulated annealing.

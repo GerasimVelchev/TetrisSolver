@@ -1,5 +1,4 @@
+### Binary files
 
-# Binary files
-
-/*.exe
-/*.o
+*.exe
+*.o
